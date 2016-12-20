@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --inline  --hot --content-base ./src/webapp",
+    "b":"webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/chunbobo/videopro/issues"
   },
-  "homepage": "https://github.com/chunbobo/videopro#readme"
+  "homepage": "https://github.com/chunbobo/videopro#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "element-ui": "^1.0.7",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue": "^2.1.6",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.6",
+    "vuex": "^2.1.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
