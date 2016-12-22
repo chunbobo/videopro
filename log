@@ -1,0 +1,7 @@
+日志：
+第一次实战
+1：创建了导航栏
+2：创建了公共CSS
+3：创建了自己的插件(video/global)
+插件里面放入公用的函数库(video/functions)
+4：创建了API配置库(config/APIconfig)
