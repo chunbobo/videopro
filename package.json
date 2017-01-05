@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline  --hot --content-base ./src/webapp",
-    "b":"webpack"
+    "b": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "url-loader": "^0.5.7",
     "vue": "^2.1.6",
     "vue-loader": "^10.0.2",
+    "vue-resource": "^1.0.3",
     "vue-template-compiler": "^2.1.6",
     "vuex": "^2.1.1",
     "webpack": "^1.14.0",

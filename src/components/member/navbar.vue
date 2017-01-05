@@ -1,8 +1,7 @@
 <template>
     <div>
-        <el-menu theme="light" default-active="1" class="el-menu-demo" mode="horizontal">
-            <el-menu-item index="1">处理中心</el-menu-item>
-            <el-menu-item index="3">订单管理</el-menu-item>
+        <el-menu theme="light" default-active="/" class="el-menu-demo" mode="horizontal"  >
+            <el-menu-item v-bind:index="item.nav_url" v-for="item in this.$store.state.res.navbar">{{item.nav_text}}</el-menu-item>
         </el-menu>
     </div>
 </template>
@@ -14,7 +13,7 @@
 <script>
     export default{
         created(){
-            console.log(this.APIConfig.API_NavBar)
+            this.$store.dispatch('loadData',{url:this.APIConfig.API_NavBar,key:"navbar"});
         }
     }
 </script>
