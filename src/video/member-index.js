@@ -3,17 +3,25 @@
  */
 
 import Vue from "vue"
-import Vuex from "vuex"
-import ElmentUI from "element-ui"
-import 'element-ui/lib/theme-default/index.css'
+
+
+
 import "./../css/common.css"
 import navbar from "./../components/member/navbar.vue"
-import VueResource from "vue-resource"
+
+
 import global from "./global.js"
 Vue.use(global);
+import Vuex from "vuex"
 Vue.use(Vuex);
+import ElmentUI from "element-ui"
 Vue.use(ElmentUI);
+import 'element-ui/lib/theme-default/index.css'
+import VueResource from "vue-resource"
 Vue.use(VueResource);
+import VueRouter from "vue-router"
+Vue.use(VueRouter);
+import {routerConfig} from "./../config/RouterConfig"
 
 import ResModule from "./../store/modules/ResModule"    //应该资源模块
 const vuex_config = new Vuex.Store({
@@ -25,5 +33,6 @@ const vuex_config = new Vuex.Store({
 Vue.component("navbar",navbar);
 new Vue({
     el:'.container',
-    store:vuex_config
+    store:vuex_config,
+    router:routerConfig
 });

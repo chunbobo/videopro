@@ -8,7 +8,7 @@ module.exports = {
         "web-index":[__dirname + '/src/video/web-index.js']
     },
     output:{
-        publicPath:"http://127.0.0.1:8080",
+        publicPath:"http://127.0.0.1:8080/",
         path: __dirname + '/src/webapp/js', //输出文件夹
         filename:'[name].js'    //文件名。不包含路径
     },
