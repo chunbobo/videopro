@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-row>
+        <el-row class="outbox">
             <el-col :span="4">
                 <membermenu></membermenu>
             </el-col>
@@ -12,7 +12,10 @@
 </template>
 
 <style>
-   
+    .outbox{
+        width:80%;
+        margin:50px auto;
+    }
 </style>
 
 <script>
