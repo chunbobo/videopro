@@ -24,7 +24,6 @@ export default{
     getters:{
         navForVideoClass:(state)=>{
             return state.navbar.filter((item)=>{
-                console.log(item)
                 return item.nav_text != '首页';
             })
         }
