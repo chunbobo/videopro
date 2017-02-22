@@ -23,7 +23,8 @@ module.exports = {
     module:{
         loaders:[
             {test:/\.js$/, loader:"babel", query:{compact:true}},
-            {test:/\.vue$/,loader:"babel!vue", exclude: "/node_modules/"},   //这里解析顺序是从右到左
+            //{test:/\.vue$/,loader:"babel!vue", exclude: /node_modules/},   //这里解析顺序是从右到左
+            {test:/\.vue$/,loader:"babel!vue"},
             {test:/\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,loader:"file" },
             {test: /\.css$/,loader: 'style-loader!css-loader'},
             {test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,loader: 'file-loader',query: {name: '[name].[ext]?[hash]'}}
