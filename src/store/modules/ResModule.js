@@ -19,7 +19,8 @@ export default{
                 // error callback
                 console.log('error');
             });
-        }
+        },
+        
     },
     getters:{
         navForVideoClass:(state)=>{
