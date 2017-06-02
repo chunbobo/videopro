@@ -4,8 +4,6 @@
 
 import Vue from "vue"
 
-
-
 import "./../css/common.css"
 import navbar from "./../components/member/navbar.vue"
 

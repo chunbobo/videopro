@@ -3,8 +3,8 @@ var webpack = require('webpack');
 
 module.exports = {
     entry:{
-        "member-index":[__dirname + '/src/video/member-index.js',
-        'webpack-dev-server/client?http://127.0.0.1:8080'],
+        "member-index":[__dirname + '/src/video/member-index.js','webpack-dev-server/client?http://127.0.0.1:8080'],
+        "user-index":[__dirname + '/src/video/user-index.js','webpack-dev-server/client?http://127.0.0.1:8080'],
         "web-index":[__dirname + '/src/video/web-index.js']
     },
     output:{
@@ -38,8 +38,14 @@ module.exports = {
             chunks:['member-index']
         }),
         new HtmlWebPackPlugin({
-            filename:"index.html",     //用户后台首页
-            template:__dirname + '/src/pages/member/index.html',    //模板文件
+            filename:"/users/index.html",     //用户登录首页
+            template:__dirname + '/src/pages/users/index.html',    //模板文件
+            inject:'body',
+            chunks:['user-index']
+        }),
+        new HtmlWebPackPlugin({
+            filename:"/web/index.html",     //全站首页
+            template:__dirname + '/src/pages/web/index.html',    //模板文件
             inject:'body',
             chunks:['web-index']
         })
